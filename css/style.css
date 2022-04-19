@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Plus+Jakarta+Sans:wght@800&display=swap');
+
+body {
+    background: #384353;
+    color: whitesmoke;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+}
+
+.title{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.data-info_time, .item-time, .day-date{
+    font-family: 'Iceland';
+    font-size: 24px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+    height: 400px;
+}
+
+.window-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    padding: 40px 20px 40px 20px;
+    background-color: #222831;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.list-days {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.list-days_title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.window-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    padding-bottom: 60px;
+}
+
+.data-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    font-size: 30px;
+    text-transform: uppercase;
+    background: rgba( 0, 0, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 30%);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-top-right-radius: 10px;
+}
+
+.data-info_icon {
+    background-image: url("/assets/time/icons8-new-moon-96.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 56px;
+}
+
+.data-weather {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 42px;
+    padding: 40px 0px 40px 0px;
+}
+
+.data-weather_icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+}
+
+.weather_icon {
+    width: 48px;
+    height: 48px;
+}
+
+.item-icon {
+    background-image: url("/assets/weather/icons8-rain-cloud-96.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.data-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.data-list_item {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0px 5px 0px;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*Change mode Light\Dark*/
+
+.light-mode {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.window-list_light {
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 20%);
+}
+
+.window-data_light {
+    box-shadow: 20px 8px 32px 0px rgb(0 0 0 / 20%);
+}
+
+.data-info_light {
+    box-shadow: none;
+}
+
+.list-mode {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+input.switch {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 2em;
+    width: 3em;
+    border-radius: 1em;
+    box-shadow: inset -1em 0px 0px 0px rgba(192, 192, 192, 1);
+    background-color: white;
+    border: 1px solid rgba(192, 192, 192, 1);
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+input.switch:checked{
+    background-color: #384353;
+    box-shadow: inset 1em 0px 0px 0px rgba( 255, 255, 255, 0.5 );
+    border: 0px;
+}
