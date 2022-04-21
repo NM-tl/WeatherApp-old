@@ -8,6 +8,10 @@ body {
     font-weight: 400;
 }
 
+*:focus {
+    outline: none;
+}
+
 .title{
     font-family: 'Plus Jakarta Sans';
     font-size: 36px;
@@ -17,6 +21,10 @@ body {
 .data-info_time, .item-time, .day-date{
     font-family: 'Iceland';
     font-size: 24px;
+}
+
+.wind-deg, .wind-speed {
+    font-family: 'Plus Jakarta Sans';
 }
 
 .main {
@@ -40,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     width: 40%;
     padding: 40px 20px 40px 20px;
     background-color: #222831;
@@ -48,18 +56,38 @@ body {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
 }
 
-.list-days {
-    width: 100%;
+form {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
 }
 
-.list-days_title {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 60px;
+input {
+    font-size: 24px;
+    font-family: 'Plus Jakarta Sans';
+    border: none;
+    background: none;
+    text-align: center;
+    box-shadow: 0 0px 15px 0 rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+    color: whitesmoke;
+}
+
+button {
+    font-size: 18px;
+    border: none;
+    background: rgba(192, 192, 192, 1);
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 15px 45px 15px 45px;
+    box-shadow: 0 0px 15px 0 rgb(0 0 0 / 25%);
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    color: #384353;
 }
 
 .day {
@@ -79,7 +107,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    background: rgba( 255, 255, 255, 0.2 );
+    background: rgba( 255, 255, 255, 0.3 );
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 9px );
@@ -105,55 +133,27 @@ body {
     border-top-right-radius: 10px;
 }
 
-.data-info_icon {
-    background-image: url("/assets/time/icons8-new-moon-96.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 56px;
-    height: 56px;
-}
-
 .data-weather {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     font-size: 42px;
-    padding: 40px 0px 40px 0px;
+    padding: 20px 20px 0px 20px;
 }
 
-.data-weather_icon {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 36px;
-    height: 36px;
-}
-
-.weather_icon {
-    width: 48px;
-    height: 48px;
-}
-
-.item-icon {
-    background-image: url("/assets/weather/icons8-rain-cloud-96.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-}
-
-.data-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.data-list_item {
-    display: flex;
-    justify-content: space-around;
-    margin: 5px 0px 5px 0px;
+.data-weather_caption {
+    font-family: 'Plus Jakarta Sans';
     font-size: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+.data-weather_wind {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
 }
 
 /*Change mode Light\Dark*/
@@ -183,6 +183,10 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.data-input_light {
+    color: black;
 }
 
 input.switch {

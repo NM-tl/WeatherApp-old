@@ -18,54 +18,34 @@
                 <div class="list-mode_title">Light mode</div>
                 <input class="switch" type="checkbox" onclick="mode()">
             </div>
-            <div class="list-days_title">
-                <div>Day:</div>
-                <div>Month:</div>
-            </div>
-            <div class="list-days">
-                <div class="day">
-                    <div class="day-name">Monday</div>
-                    <div class="day-date">22.02</div>
-                </div>
-                <div class="day">
-                    <div class="day-name">Tuesday</div>
-                    <div class="day-date">22.02</div>
-                </div>
-                <div class="day">
-                    <div class="day-name">Wednesday</div>
-                    <div class="day-date">24.02</div>
-                </div>
+            <div class="list-form">
+                <form>
+                    <input type="text" placeholder="Search for a city" id="data-input">
+                    <button type="submit">SUBMIT</button>
+                    <span class="msg"></span>
+                </form>
             </div>
         </div>
         <div class="window-data" id="window-data">
             <div class="data-info" id="data-info">
-                <div class="data-info_city"></div>
-                <div class="data-info_time">23:15</div>
-                <div class="data-info_icon"></div>
+                <div class="data-info_city">CityName</div>
+                <div class="data-info_time"></div>
+                <div class="data-info_country"></div>
             </div>
             <div class="data-weather">
-                <div class="data-weather_value"></div>
-                <div class="data-weather_icon"><img class="weather_icon" src="assets/weather/unknown.png" /></div>
+                <div class="data-weather_value">?<sup>°C</sup></div>
+                <div class="data-weather_icon"><img class="weather_icon" src="assets/weather/unknown.png"></div>
             </div>
-            <div class="data-list">
-                <div class="data-list_item">
-                    <div class="item-time">00:00</div>
-                    <div class="item-icon"></div>
-                    <div class="item-value">8C</div>
-                </div>
-                <div class="data-list_item">
-                    <div class="item-time">01:00</div>
-                    <div class="item-icon"></div>
-                    <div class="item-value">6C</div>
-                </div>
-                <div class="data-list_item">
-                    <div class="item-time">02:00</div>
-                    <div class="item-icon"></div>
-                    <div class="item-value">5C</div>
-                </div>
+            <div class="data-weather_caption">Weather caption</div>
+            <div class="data-weather_wind">
+                <div class="wind-speed">Wind speed:</div>
+                <div class="wind-deg">Wind Degree Direction:</div>
             </div>
         </div>
     </div>
+</section>
+<section class="ajax-section">
+        <ul class="cities"></ul>
 </section>
 
 <script src="scripts/main.js"></script>
